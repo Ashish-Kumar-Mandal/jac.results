@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Automation - JAC-RanchiResults" thread-count="5" parallel="tests">
+	<listeners>
+		<listener class-name="utilities.ReportGenerate" />
+	</listeners>
+
+	<test thread-count="2" name="Functional Testing - JAC 10th Result" parallel="classes" enabled="false">
+		<parameter name="Browser" value="Edge" />
+		<parameter name="url" value="https://www.jacresults.com/sec-all/" />
+		<parameter name="rollCode" value="21012" />
+		<parameter name="rollNumber" value="0001" />
+		<parameter name="stream" value="10th" />
+		<classes>
+			<class name="scripts.Script10th" />
+		</classes>
+	</test>
+
+	<test thread-count="2" name="Functional Testing - JAC 12th Science Result" parallel="classes" enabled="true">
+		<parameter name="Browser" value="Edge" />
+		<parameter name="url" value="https://www.jacresults.com/science/" />
+		<parameter name="rollCode" value="22055" />
+		<parameter name="rollNumber" value="10001" />
+		<parameter name="stream" value="ISc" />
+		<classes>
+			<class name="scripts.Script12th" />
+		</classes>
+	</test>
+
+	<test thread-count="2" name="Functional Testing - JAC12th Commerce Result" parallel="classes" enabled="false">
+		<parameter name="Browser" value="Edge" />
+		<parameter name="url" value="https://www.jacresults.com/commerce/" />
+		<parameter name="rollCode" value="22005" />
+		<parameter name="rollNumber" value="20001" />
+		<parameter name="stream" value="ICom" />
+		<classes>
+			<class name="scripts.Script12th" />
+		</classes>
+	</test>
+
+	<test thread-count="2" name="Functional Testing - JAC12th Arts Result" parallel="classes" enabled="false">
+		<parameter name="Browser" value="Edge" />
+		<parameter name="url" value="https://www.jacresults.com/arts/" />
+		<parameter name="rollCode" value="22057" />
+		<parameter name="rollNumber" value="30001" />
+		<parameter name="stream" value="IA" />
+		<classes>
+			<class name="scripts.Script12th" />
+		</classes>
+	</test>
+
+</suite>
